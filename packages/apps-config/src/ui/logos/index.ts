@@ -210,7 +210,7 @@ import nodeSubsocialX from './nodes/subsocialX.svg';
 import nodeSubspace from './nodes/subspace.png';
 import nodeSubstrateContractsNode from './nodes/substrate-contracts-node.png';
 import nodeSubstrate from './nodes/substrate-hexagon.svg';
-import nodeSugarFunge from './nodes/sugarfunge.svg';
+import nodeSugarFunge from './nodes/sortium.svg'; // TODO: Update to SugarFunge Logo
 import nodeSwapdex from './nodes/swapdex.svg';
 import nodeTernoa from './nodes/ternoa.svg';
 import nodeTrustBase from './nodes/trustbase.png';
