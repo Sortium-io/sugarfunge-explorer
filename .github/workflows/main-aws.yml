@@ -2,7 +2,7 @@ name: DockerBuildPushAWS
 
 on:
   push:
-    branches: [ IS-4-create-sugarfunge-explorer-docker-image-on-aws ]
+    branches: [ master ]
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
