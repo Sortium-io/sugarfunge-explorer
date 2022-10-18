@@ -24,10 +24,10 @@ jobs:
             REPOSITORY: ${{ secrets.AWS_ECR_REPOSITORY }}
             IMAGE_TAG: amd64
           run: |
-            docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG . -f docker/Dockerfile
-            docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG:${{ github.sha }}
-            docker tag $REGISTRY/$REPOSITORY:$IMAGE_TAG-${{ github.sha }} $REGISTRY/$REPOSITORY:$IMAGE_TAG:latest
-            docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG:latest
+            docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG-${{ github.sha }} . -f docker/Dockerfile
+            docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG-${{ github.sha }}
+            docker tag $REGISTRY/$REPOSITORY:$IMAGE_TAG-${{ github.sha }} $REGISTRY/$REPOSITORY:$IMAGE_TAG-latest
+            docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG-latest
         # - uses: slackapi/slack-github-action@v1.18.0
         #   with:
         #     channel-id: ${{ secrets.SUGARFUNGE_SLACK_CHANNEL_ID }}
